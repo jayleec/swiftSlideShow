@@ -13,6 +13,9 @@
 		E80646751E0CF49600870B0E /* flickrSlideShow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80646731E0CF49600870B0E /* flickrSlideShow.xcdatamodeld */; };
 		E80646771E0CF49600870B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80646761E0CF49600870B0E /* Assets.xcassets */; };
 		E806467A1E0CF49600870B0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80646781E0CF49600870B0E /* LaunchScreen.storyboard */; };
+		E80646861E0CFA3600870B0E /* FlickrAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80646851E0CFA3600870B0E /* FlickrAPIHandler.swift */; };
+		E80646881E0D1A9D00870B0E /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80646871E0D1A9D00870B0E /* SlideShowViewController.swift */; };
+		E806468B1E0D301E00870B0E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806468A1E0D301E00870B0E /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E80646761E0CF49600870B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80646791E0CF49600870B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E806467B1E0CF49600870B0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80646851E0CFA3600870B0E /* FlickrAPIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPIHandler.swift; sourceTree = "<group>"; };
+		E80646871E0D1A9D00870B0E /* SlideShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
+		E806468A1E0D301E00870B0E /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				E806466C1E0CF49600870B0E /* AppDelegate.swift */,
 				E806466E1E0CF49600870B0E /* ViewController.swift */,
+				E80646851E0CFA3600870B0E /* FlickrAPIHandler.swift */,
+				E80646871E0D1A9D00870B0E /* SlideShowViewController.swift */,
 				E80646701E0CF49600870B0E /* Main.storyboard */,
+				E80646891E0D2FD300870B0E /* Extensions */,
 				E80646761E0CF49600870B0E /* Assets.xcassets */,
 				E80646781E0CF49600870B0E /* LaunchScreen.storyboard */,
 				E806467B1E0CF49600870B0E /* Info.plist */,
 				E80646731E0CF49600870B0E /* flickrSlideShow.xcdatamodeld */,
 			);
 			path = flickrSlideShow;
+			sourceTree = "<group>";
+		};
+		E80646891E0D2FD300870B0E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E806468A1E0D301E00870B0E /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80646751E0CF49600870B0E /* flickrSlideShow.xcdatamodeld in Sources */,
+				E806468B1E0D301E00870B0E /* UIViewExtensions.swift in Sources */,
 				E806466F1E0CF49600870B0E /* ViewController.swift in Sources */,
 				E806466D1E0CF49600870B0E /* AppDelegate.swift in Sources */,
+				E80646861E0CFA3600870B0E /* FlickrAPIHandler.swift in Sources */,
+				E80646881E0D1A9D00870B0E /* SlideShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +326,7 @@
 				E80646801E0CF49600870B0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
