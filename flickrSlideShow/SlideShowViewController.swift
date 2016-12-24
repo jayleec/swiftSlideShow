@@ -22,13 +22,19 @@ class SlideShowViewController: UIViewController {
         super.viewDidLoad()
         
         print("aniDuration = \(aniDuration)")
+        update()
+        Timer.scheduledTimer(timeInterval: 40, target: self, selector: #selector(SlideShowViewController.update), userInfo: nil, repeats: true)
         
+    }
+    
+    func update() {
+        print("reload")
+        print("aniDuration:\(aniDuration)")
         loadImagesFromFlickr()
         
         for link in self.imagelinks {
             self.imageFromServerURL(urlString: link)
         }
-        
     }
     
     
@@ -41,8 +47,8 @@ class SlideShowViewController: UIViewController {
     
     
     func loadImagesFromFlickr(){
-        var apiStr = "https://api.flickr.com/services/feeds/photos_public.gne"
-        var strToURL: NSURL = NSURL(string: apiStr)!
+        let apiStr = "https://api.flickr.com/services/feeds/photos_public.gne"
+        let strToURL: NSURL = NSURL(string: apiStr)!
         var flickrHander = FlickrAPIHandler.init(contentsOf: strToURL as URL)
         
         imagelinks = (flickrHander?.imageLinks)!
@@ -52,7 +58,7 @@ class SlideShowViewController: UIViewController {
     
     
     func imageFromServerURL(urlString: String) {
-        var session = URLSession.shared
+        let session = URLSession.shared
         session.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
             
             if error != nil {
@@ -69,7 +75,7 @@ class SlideShowViewController: UIViewController {
                 }
                 
             })
-            
+
         }).resume()
         
     }

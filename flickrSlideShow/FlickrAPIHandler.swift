@@ -18,6 +18,8 @@ class FlickrAPIHandler: NSObject, XMLParserDelegate, URLSessionDelegate{
     var imageLinks = [String]()
     var images = [UIImage]()
     
+    var delegate: XMLParserDelegate?
+    
     init?(contentsOf url: URL) {
         guard var parser = XMLParser(contentsOf: url) else { return nil}
         self.parser = parser
@@ -58,6 +60,6 @@ class FlickrAPIHandler: NSObject, XMLParserDelegate, URLSessionDelegate{
     
     
     func parserDidEndDocument(_ parser: XMLParser) {
-
+        
     }
 }
